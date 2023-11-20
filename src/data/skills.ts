@@ -6,8 +6,6 @@ import {
   html,
   javascript,
   mongodb,
-  motion,
-  mui,
   nextjs,
   nodejs,
   react,

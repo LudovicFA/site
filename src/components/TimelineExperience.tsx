@@ -11,7 +11,6 @@ export default function TimelineExperience({experience}: TimelineExperienceProps
     const temp = `${date.start} ${date.end ? ` - ${date.end}` : ``}`;
     return (
     <VerticalTimelineElement
-        animate={true}
         className="vertical-timeline-element--work"
         contentStyle={{ background: '#fff', color: '#000', borderTop: '3px solid #2b77e7' }}
         contentArrowStyle={{ borderRight: '7px solid  #fff' }}

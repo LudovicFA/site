@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { posts } from '../data/blog';
 import Markdown from 'react-markdown';
 import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter'
-import {dark,a11yDark} from 'react-syntax-highlighter/dist/esm/styles/prism'
+import {a11yDark} from 'react-syntax-highlighter/dist/esm/styles/prism'
 
 
 const Post = () => {
@@ -39,11 +39,12 @@ const Post = () => {
               children={content}
               components={{
                 code(props) {
-                  const {children, className, node, ...rest} = props
+                  const {children, className, ...rest} = props
                   const match = /language-(\w+)/.exec(className || '')
+
                   return match ? (
+
                     <SyntaxHighlighter
-                      {...rest}
                       PreTag="div"
                       children={String(children).replace(/\n$/, '')}
                       language={match[1]}
