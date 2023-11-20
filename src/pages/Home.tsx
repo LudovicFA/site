@@ -22,10 +22,10 @@ const Home = () => {
                 </span>{" "}
                 
             </h1>
-            <p>
-              I am determined to tackle any challenge, equipped with sharp expertise and a passion for digital innovation.
+            <p className='mt-6 text-lg'>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, voluptatem. Quaerat possimus tempora animi, itaque aperiam praesentium maxime deserunt repellendus rem ea et architecto corrupti illo velit dolorum cum beatae.
             </p>
-            <section className="cta">
+            <section className="cta mt-4">
               <Link to="/contact" className="btn">
                 Contact
               </Link>

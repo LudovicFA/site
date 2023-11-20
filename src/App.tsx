@@ -3,6 +3,7 @@ import { Blog, Contact, Home } from "./pages";
 import Navbar from "./components/Navbar";
 import Experiences from "./pages/Experiences";
 import Post from "./pages/Post";
+import Works from "./pages/Works";
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/experiences" element={<Experiences />} />
+        <Route path="/works" element={<Works />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:slug" element={<Post />} />

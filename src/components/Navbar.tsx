@@ -27,7 +27,7 @@ const Navbar = () => {
           Experiences
         </NavLink>
         <NavLink
-          to="/"
+          to="/works"
           className={({ isActive }) =>
             isActive ? "text-blue-500" : "text-black"
           }
