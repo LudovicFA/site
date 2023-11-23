@@ -1,6 +1,31 @@
 import { NavLink } from "react-router-dom";
+import { useI18nMode } from "../context/I18nModeContext";
+import { useEffect, useState } from "react";
+import { Route } from "../types/Route";
+
+
+
+async function getLinks(lang:string): Promise<Route[]>{
+  if(lang === 'EN'){
+    const tempo = await import('../data/en/routes');
+    return tempo.links
+  }
+  else {
+    const tempo = await import('../data/fr/routes');
+    return tempo.links
+  }
+}
 
 const Navbar = () => {
+  const {lang, setLangMode} = useI18nMode()
+  const [links, setLinks] = useState([] as Route[])
+  useEffect(
+    function(){
+      getLinks(lang).then((data: Route[]) => setLinks(data));
+    }
+
+  , [lang]);
+
   return (
     <header className="header">
       <NavLink
@@ -10,39 +35,33 @@ const Navbar = () => {
         <p className="blue-gradient_text">LFA</p>
       </NavLink>
       <nav className="flex text-lg gap-7 font-medium">
-        <NavLink
-          to="/blog"
-          className={({ isActive }) =>
-            isActive ? "text-blue-500" : "text-black"
-          }
+        {
+          links.map((link, index) => (
+            <NavLink
+              to={link.route}
+              className={({ isActive }) =>
+                isActive ? "text-blue-500" : "text-black"
+              }
+              key={index}
+            >
+               {link.label}
+            </NavLink>
+          ))
+        }
+
+        | 
+        <p>
+        <a onClick={() => setLangMode('FR')}
+            className={`${lang === 'FR' ? "text-blue-500" : "text-black"} cursor-pointer`}>
+          FR
+        </a> -{' '}
+        <a onClick={() => setLangMode('EN')} 
+            className={`${lang === 'EN' ? "text-blue-500" : "text-black"} cursor-pointer`}
         >
-          Blog
-        </NavLink>
-        <NavLink
-          to="/experiences"
-          className={({ isActive }) =>
-            isActive ? "text-blue-500" : "text-black"
-          }
-        >
-          Experiences
-        </NavLink>
-        <NavLink
-          to="/works"
-          className={({ isActive }) =>
-            isActive ? "text-blue-500" : "text-black"
-          }
-        >
-          Works
-        </NavLink>
-        <NavLink
-          to="/contact"
-          className={({ isActive }) =>
-            isActive ? "text-blue-500" : "text-black"
-          }
-        >
-          Contact
-        </NavLink>
-        | FR - EN
+            EN
+          </a>
+
+        </p>
       </nav>
     </header>
   );

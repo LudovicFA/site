@@ -13,7 +13,7 @@ import {
   sass,
   tailwindcss,
   typescript,
-} from "../assets/icons";
+} from "../../assets/icons";
 
 export const skills = [
   {
