@@ -3,12 +3,12 @@ import { anaximandre, conserto, hardis, sfeir } from "../../assets/entreprises";
 export const experiences = [
   {
     entreprise: "SFEIR",
-    client: "Virage Group",
-    statut: "Développeur Front Senior Angular",
     logo: {
       src: sfeir,
       color: "#000000",
     },
+    client: "Virage Group",
+    statut: "Développeur Front Senior Angular",
     date: {
       start: "Juillet 2022",
       end: "Juillet 2023",
@@ -172,7 +172,7 @@ export const experiences = [
       src: hardis,
       color: "#00aeef",
     },
-    client: " Crédit Agricole Atlantique Vendée",
+    client: "Crédit Agricole Atlantique Vendée",
     statut: "Développeur Mobile et PHP",
     date: {
       start: "Mars 2016",

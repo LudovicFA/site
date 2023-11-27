@@ -1,6 +1,12 @@
+import { anaximandre, conserto, hardis, sfeir } from "../../assets/entreprises";
+
 export const experiences = [
   {
     entreprise: "SFEIR",
+    logo: {
+      src: sfeir,
+      color: "#000000",
+    },
     client: "Virage Group",
     statut: "Senior Front Developer Angular",
     date: {
@@ -36,6 +42,10 @@ export const experiences = [
   },
   {
     entreprise: "Conserto",
+    logo: {
+      src: conserto,
+      color: "#e95196",
+    },
     client: "La Poste CSMSI",
     statut: "LeadDev / PPO Fullstack",
     date: {
@@ -71,6 +81,10 @@ export const experiences = [
   },
   {
     entreprise: "Hardis",
+    logo: {
+      src: hardis,
+      color: "#00aeef",
+    },
     client: "La Banque postale",
     statut: "LeadDev",
     date: {
@@ -94,6 +108,10 @@ export const experiences = [
   },
   {
     entreprise: "Hardis",
+    logo: {
+      src: hardis,
+      color: "#00aeef",
+    },
     client: "INSEE",
     statut: "Expertise Javascript",
     date: {
@@ -110,6 +128,10 @@ export const experiences = [
   },
   {
     entreprise: "Hardis",
+    logo: {
+      src: hardis,
+      color: "#00aeef",
+    },
     client: "La Poste CSMSI",
     statut: "LeadDev / Scrumaster FullStack",
     date: {
@@ -146,7 +168,11 @@ export const experiences = [
   },
   {
     entreprise: "Hardis",
-    client: " Crédit Agricole Atlantique Vendée",
+    logo: {
+      src: hardis,
+      color: "#00aeef",
+    },
+    client: "Crédit Agricole Atlantique Vendée",
     statut: "Mobile and PHP Developer",
     date: {
       start: "March 2016",
@@ -175,6 +201,10 @@ export const experiences = [
   },
   {
     entreprise: "Hardis",
+    logo: {
+      src: hardis,
+      color: "#00aeef",
+    },
     client: "Carif-Oref",
     statut: "Senior PHP Develope",
     date: {
@@ -203,6 +233,10 @@ export const experiences = [
   },
   {
     entreprise: "Anaximandre",
+    logo: {
+      src: anaximandre,
+      color: "#08344c",
+    },
     statut: "Développer PHP",
     date: {
       start: "October 2009",
