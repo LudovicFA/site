@@ -2,6 +2,7 @@ import { useState } from "react";
 import useAlert from "../hooks/useAlert";
 import emailjs from "@emailjs/browser";
 import Alert from "../components/Alert";
+import { useI18nMode } from "../context/I18nModeContext";
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -9,6 +10,7 @@ const Contact = () => {
   const { alert, showAlert, hideAlert } = useAlert();
   const [currentAnimation, setCurrentAnimation] = useState("idle");
   const [isFormValid, setisFormValid] = useState(false)
+  const {lang} = useI18nMode();
   
   const handleSubmit = (e : React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -36,7 +38,7 @@ const Contact = () => {
       .then(() => {
         setIsLoading(false);
         // SUCCESS MESSAGE
-        showAlert({ show: true, text: "Sent successfully", type: "success" });
+        showAlert({ show: true, text: lang === 'FR' ? "Envoi réussi " : "Sent successfully", type: "success" });
         setTimeout(() => {
           hideAlert();
           setCurrentAnimation("idle");
@@ -44,8 +46,7 @@ const Contact = () => {
         }, 3000);
       })
       .catch((error) => {
-        showAlert({ show: true, text: "I didnt receive your message", type: "danger" });
-
+        showAlert({ show: true, text: lang === "FR" ? "Je n'ai pas pu recevoir votre message" :"I didnt receive your message", type: "danger" });
         setIsLoading(false);
         setCurrentAnimation("idle");
         console.log(error);
@@ -62,22 +63,40 @@ const Contact = () => {
 
   return (
     <section className='max-container'>
-      <h1 className='head-text'>Contact</h1>
+      
+      {
+          lang === 'FR' && ( <h1 className="head-text">
+        📧 Me {" "}
+          <span className="blue-gradient_text font-semibold drop-shadow">
+            Contacter
+          </span>
+              </h1>
+              )
+      }
+      {
+          lang === 'EN' && ( <h1 className="head-text">
+        📧 Contact {" "}
+          <span className="blue-gradient_text font-semibold drop-shadow">
+            Me
+          </span>
+              </h1>
+              )
+      }
       {alert.show && <Alert {...alert} />}
       <form
           className="w-full flex flex-col gap-7 mt-14"
           onSubmit={handleSubmit}
         >
-          <label className="text-black-500 font-semibold">Name</label>
+          <label className="text-black-500 font-semibold">{ lang === 'FR' ? 'Nom / Prénom' : "Name / Firstname"}</label>
           <input
             type="text"
             name="name"
             className="input"
-            placeholder="John"
+            placeholder="John Doe"
             value={form.name}
             onChange={handleChange}
           />
-          <label className="text-black-500 font-semibold">Email</label>
+          <label className="text-black-500 font-semibold">E-mail</label>
           <input
             type="email"
             name="email"
@@ -86,12 +105,12 @@ const Contact = () => {
             value={form.email}
             onChange={handleChange}
           />
-          <label className="text-black-500 font-semibold">Your message</label>
+          <label className="text-black-500 font-semibold">{ lang === 'FR' ? 'Votre Message' : "Your Message"}</label>
           <textarea
             rows={4}
             name="message"
             className="textarea"
-            placeholder="Let me know how i can help you"
+            placeholder={ lang === 'FR' ? 'Dites moi comment je peux vous aider' : "Let me know how i can help you"}
             value={form.message}
             onChange={handleChange}
           />
@@ -102,7 +121,12 @@ const Contact = () => {
             disabled={isLoading || !isFormValid}
 
           >
-            {isLoading ? "Sending..." : "Send Message"}
+            {
+              isLoading ? 
+                lang === "FR" ? "Envoi ... " : "Sending ..."
+              :
+                lang === "FR" ? "Envoyer" : "Send Message"
+            }
           </button>
         </form>
     </section>
