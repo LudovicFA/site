@@ -53,7 +53,7 @@ const Experiences = () => {
       }
    
     <VerticalTimeline 
-        lineColor="#00c6ff "
+        lineColor="#0072ff "
       >
       {
         experiences?.map((experience, index) => (

@@ -1,8 +1,14 @@
+import { anaximandre, conserto, hardis, sfeir } from "../../assets/entreprises";
+
 export const experiences = [
   {
     entreprise: "SFEIR",
     client: "Virage Group",
     statut: "Développeur Front Senior Angular",
+    logo: {
+      src: sfeir,
+      color: "#000000",
+    },
     date: {
       start: "Juillet 2022",
       end: "Juillet 2023",
@@ -36,6 +42,10 @@ export const experiences = [
   },
   {
     entreprise: "Conserto",
+    logo: {
+      src: conserto,
+      color: "#e95196",
+    },
     client: "La Poste CSMSI",
     statut: "LeadDev / PPO Fullstack",
     date: {
@@ -71,6 +81,10 @@ export const experiences = [
   },
   {
     entreprise: "Hardis",
+    logo: {
+      src: hardis,
+      color: "#00aeef",
+    },
     client: "La Banque postale",
     statut: "LeadDev",
     date: {
@@ -94,6 +108,10 @@ export const experiences = [
   },
   {
     entreprise: "Hardis",
+    logo: {
+      src: hardis,
+      color: "#00aeef",
+    },
     client: "INSEE",
     statut: "Expertise Javascript",
     date: {
@@ -110,6 +128,10 @@ export const experiences = [
   },
   {
     entreprise: "Hardis",
+    logo: {
+      src: hardis,
+      color: "#00aeef",
+    },
     client: "La Poste CSMSI",
     statut: "LeadDev / Scrumaster FullStack",
     date: {
@@ -146,6 +168,10 @@ export const experiences = [
   },
   {
     entreprise: "Hardis",
+    logo: {
+      src: hardis,
+      color: "#00aeef",
+    },
     client: " Crédit Agricole Atlantique Vendée",
     statut: "Développeur Mobile et PHP",
     date: {
@@ -175,6 +201,10 @@ export const experiences = [
   },
   {
     entreprise: "Hardis",
+    logo: {
+      src: hardis,
+      color: "#00aeef",
+    },
     client: "Carif-Oref",
     statut: "Développeur senior PHP",
     date: {
@@ -203,6 +233,10 @@ export const experiences = [
   },
   {
     entreprise: "Anaximandre",
+    logo: {
+      src: anaximandre,
+      color: "#08344c",
+    },
     statut: "Développeur PHP",
     date: {
       start: "Octobre 2009",

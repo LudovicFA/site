@@ -7,20 +7,33 @@ import {
 type TimelineExperienceProps = {experience: ExperienceType}
 
 export default function TimelineExperience({experience}: TimelineExperienceProps) {
-    const {entreprise,client, description, date, statut, environnements, realisations} = experience;
+    const {entreprise,client, description, date, statut, environnements, realisations, logo} = experience;
     const temp = `${date.start} ${date.end ? ` - ${date.end}` : ``}`;
     return (
+        <>
+        
     <VerticalTimelineElement
         className="vertical-timeline-element--work"
-        contentStyle={{ background: '#fff', color: '#000', borderTop: '3px solid #2b77e7' }}
+        contentStyle={{ background: '#fff', color: '#000', borderTop: `3px solid ${ logo?.color}` }}
         contentArrowStyle={{ borderRight: '7px solid  #fff' }}
         date={temp}
         dateClassName="font-bold"
-        iconStyle={{ background: '#2b77e7', color: '#fff' }}
+        iconStyle={{ background: logo?.color, color: '#fff' }}
         icon={<HiOutlineBriefcase />}
 
-    >
-        <h3 className="vertical-timeline-element-title subsubhead-text">{entreprise} {client ? <small>- {experience.client}</small> : ''}</h3>
+    >   
+        <div className='flex items-center mb-2 h-[32px]'>
+            <img src={logo?.src} alt={entreprise} className='mr-4'/>
+            <h3 className="flex-1 vertical-timeline-element-title  font-extrabold text-lg">
+            {entreprise}{client ? <small className='ms-2 font-semibold text-gray-500 '>- {experience.client}</small> : ''}
+            
+            </h3>
+
+        </div>
+
+
+        
+
         <h4 className="vertical-timeline-element-subtitle text-blue-400">{statut}</h4>
         <p className='font-normal'>
             {description}
@@ -44,5 +57,7 @@ export default function TimelineExperience({experience}: TimelineExperienceProps
             }
         </div>
     </VerticalTimelineElement>
+    </>
+
   )
 }
