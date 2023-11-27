@@ -1,15 +1,19 @@
-import React, { createContext, useContext } from "react";
+import { createContext, useContext } from "react";
 import { useLocalStorageState } from "../hooks/useLocalStorageState";
 
 
-type I18nContextType = {lang: "FR" | "EN", setLangMode: (lang) => void };
+type I18nContextType = {lang: "FR" | "EN", setLangMode: (lang:string) => void };
+type PostsContextProviderProps = {
+  children: JSX.Element | JSX.Element[]
+}
+
 
 const I18nContext = createContext<I18nContextType>({lang:'FR', setLangMode : () => {return}});
 
-function I18nModeProvider({ children }) {
+function I18nModeProvider({ children } : PostsContextProviderProps) {
   const [lang, setLang] = useLocalStorageState("FR", "lang");
 
-  function setLangMode(lang) {
+  function setLangMode(lang:string) {
     setLang(lang);
   }
 

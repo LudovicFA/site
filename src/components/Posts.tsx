@@ -1,33 +1,12 @@
-import { useEffect, useState } from "react";
 import { useI18nMode } from "../context/I18nModeContext";
-import { Post } from "../types/Post";
 import { Link } from "react-router-dom";
 import PostCard from "./PostCard";
 import { posts } from "../data/blog.index";
 
 
-// async function getPosts(lang:string): Promise<Post[]>{
-//     if(lang === 'EN'){
-//       const tempo = await import('../data/en/blog');
-//       return tempo.posts
-//     }
-//     else {
-//       const tempo = await import('../data/fr/blog');
-//       return tempo.posts
-//     }
-//   }
-
-
 const Posts = () => {
     const {lang} = useI18nMode();
 
-    // const [posts, setPosts] = useState([] as Post[]);
-    // useEffect(
-    //   function(){
-    //     getPosts(lang).then((data: Post[]) => setPosts(data));
-    //   }
-  
-    // , [lang]);
   return (
     <>
         {
