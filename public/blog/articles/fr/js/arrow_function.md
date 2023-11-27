@@ -1,5 +1,3 @@
-# 6 types d'arrow fonction
-
 ## 1 - Pas de paramètre
 
 Si la fonction ne prends pas de paramètre, il faut utiliser les paranthèses vides

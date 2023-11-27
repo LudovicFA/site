@@ -1,18 +1,23 @@
-import { Post } from '../types/Post'
+import { useI18nMode } from '../context/I18nModeContext'
+import { BlogIndex } from '../types/BlogIndex'
 
 type PostCardProps = {
-    post: Post
+    post: BlogIndex
 }
 
 const PostCard = ({post}: PostCardProps) => {
+
+  const {lang} = useI18nMode()
+
+
   return (
 
     <div className="max-w-sm rounded overflow-hidden shadow-lg">
-      <img className="w-full" src={`/blog/images/${post.image}`} alt={post.title} />
+      <img className="w-full" src={`/blog/images/${post.image}`} alt={lang === 'FR' ? post.title_fr : post.title_en} />
       <div className="px-6 py-4">
-        <div className="font-bold text-xl mb-2">{post.title}</div>
+        <div className="font-bold text-xl mb-2">{lang ==='FR' ? post.title_fr : post.title_en}</div>
         <p className="text-gray-700 text-base">
-            {post.subtitle}
+            {lang == 'FR' ? post.subtitle_fr : post.subtitle_en}
         </p>
       </div>
       <div className="px-6 pt-4 pb-2">

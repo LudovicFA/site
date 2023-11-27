@@ -32,13 +32,26 @@ const Experiences = () => {
 
   return (
     <section className='max-container  h-[100vh]'>
-    <h1 className="head-text">
-           📖 My {" "}
-            <span className="blue-gradient_text font-semibold drop-shadow">
-              Experiences
-            </span>
-        </h1>
 
+      {
+          lang === 'FR' && ( <h1 className="head-text">
+        📖 Mes {" "}
+          <span className="blue-gradient_text font-semibold drop-shadow">
+            Expériences
+          </span>
+              </h1>
+              )
+      }
+      {
+          lang === 'EN' && ( <h1 className="head-text">
+        📖 My {" "}
+          <span className="blue-gradient_text font-semibold drop-shadow">
+            Expriences
+          </span>
+              </h1>
+              )
+      }
+   
     <VerticalTimeline 
         lineColor="#00c6ff "
       >

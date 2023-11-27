@@ -7,7 +7,7 @@ import {
 type TimelineExperienceProps = {experience: ExperienceType}
 
 export default function TimelineExperience({experience}: TimelineExperienceProps) {
-    const {entreprise,client, description, date, statut, environnements} = experience;
+    const {entreprise,client, description, date, statut, environnements, realisations} = experience;
     const temp = `${date.start} ${date.end ? ` - ${date.end}` : ``}`;
     return (
     <VerticalTimelineElement
@@ -22,9 +22,16 @@ export default function TimelineExperience({experience}: TimelineExperienceProps
     >
         <h3 className="vertical-timeline-element-title subsubhead-text">{entreprise} {client ? <small>- {experience.client}</small> : ''}</h3>
         <h4 className="vertical-timeline-element-subtitle text-blue-400">{statut}</h4>
-        <p>
+        <p className='font-normal'>
             {description}
         </p>
+        <ul className='list-disc ml-8 text-sm font-normal'>
+            {
+                realisations.map((realisation, index) => (
+                    <li key={index}>{realisation}</li>
+                ))
+            }
+        </ul>
         <div className='mt-4'>
             {
                 environnements.slice(0,5).map((environnement, index) => (

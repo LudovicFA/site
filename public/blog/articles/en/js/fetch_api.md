@@ -1,5 +1,3 @@
-# L'API fetch
-
 La fonction moderne `fetch()` simplfy la construction de requête AJAX pour recupèrer des données depuis un server.
 
 Par rapport à la méthode traditionnelle `XMLHttpRequest`, la fonction `fetch()` est beaucoup plus simplifié et flexible.

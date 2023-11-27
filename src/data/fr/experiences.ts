@@ -8,7 +8,7 @@ export const experiences = [
       end: "Juillet 2023",
     },
     description:
-      "PROJET  Project Monitor- Refonte du produit Project Monitor. Refonte de la partie front du produit  Project Monitor : Logiciel de pilotage de projets, portefeuille projets et plan d’actions. Au sein d’une équipe Agile Scrum composée de : 1 PPO,1 PO,1 UI/UX,1 Scrummaster,2 développeurs Back Java,3  développeurs Front Angular.Avec des sprints de 3 semaines.",
+      "Refonte de la partie front du produit  Project Monitor : Logiciel de pilotage de projets, portefeuille projets et plan d’actions. Au sein d’une équipe Agile Scrum composée de : 1 PPO,1 PO,1 UI/UX,1 Scrummaster,2 développeurs Back Java,3  développeurs Front Angular.Avec des sprints de 3 semaines.",
     realisations: [
       "Développement et maintenance de l’application",
       "Conception technique et affinage du besoin du client ",
