@@ -30,7 +30,7 @@ const Navbar = () => {
     <header className="header">
       <NavLink
         to="/"
-        className="w-10 h-10 rounded-lg bg-white items-center justify-center flex font-bold shadow-md"
+        className="w-10 h-10 rounded-lg items-center justify-center flex font-bold"
       >
         <p className="blue-gradient_text">LFA</p>
       </NavLink>
@@ -40,7 +40,7 @@ const Navbar = () => {
             <NavLink
               to={link.route}
               className={({ isActive }) =>
-                isActive ? "text-blue-500" : "text-black"
+                isActive ? "text-blue-500" : "text-black hover:text-blue-500"
               }
               key={index}
             >
@@ -52,11 +52,11 @@ const Navbar = () => {
         | 
         <p>
         <a onClick={() => setLangMode('FR')}
-            className={`${lang === 'FR' ? "text-blue-500" : "text-black"} cursor-pointer`}>
+            className={`${lang === 'FR' ? "text-blue-500" : "text-black hover:text-blue-500"} cursor-pointer`}>
           FR
         </a> -{' '}
         <a onClick={() => setLangMode('EN')} 
-            className={`${lang === 'EN' ? "text-blue-500" : "text-black"} cursor-pointer`}
+            className={`${lang === 'EN' ? "text-blue-500" : "text-black hover:text-blue-500"} cursor-pointer`}
         >
             EN
           </a>

@@ -35,7 +35,7 @@ const Hero = () => {
         </p>
         <section className="cta mt-4">
             <Link to="/contact" className="btn">
-            Contact
+            Me Contacter
             </Link>
         </section>
     </>

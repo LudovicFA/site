@@ -10,35 +10,33 @@ const Posts = () => {
   return (
     <>
         {
-            lang === 'FR' && ( <h1 className="head-text">
+            lang === 'FR' && ( <h2 className="subhead-text">
            📰 Derniers {" "}
             <span className="blue-gradient_text font-semibold drop-shadow">
                Articles
             </span>
-                </h1>
+                </h2>
                 )
         }
          {
-            lang === 'EN' && ( <h1 className="head-text">
+            lang === 'EN' && ( <h2 className="subhead-text">
            📰 Last {" "}
             <span className="blue-gradient_text font-semibold drop-shadow">
               Posts 
             </span>
-                </h1>
+                </h2>
                 )
         }
-        <div className='flex flex-row flex-wrap justify-center items-center mt-6'>
-          {
-              posts.slice(0,2).map((post, index) => (
-                  <div className='w-1/2'>
-                <Link to={`/blog/${post.slug}`} >
-                 <PostCard post={post} key={index}/>
-                </Link>
-
-              </div>
-          ))
-        }
+        <div className='flex flex-wrap justify-center lg:justify-start mt-6'>
+          {posts.slice(0,2).map((post, index) => (
+            <div className='w-full lg:w-1/2 mb-8 lg:flex-row flex-col lg:text-left'  key={post.slug}>
+              <Link to={`/blog/${post.slug}`}>
+                <PostCard post={post} key={index}/>
+              </Link>
+            </div>
+          ))}
         </div>
+
     </>
   )
 }

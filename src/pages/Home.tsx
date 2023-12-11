@@ -11,7 +11,7 @@ const Home = () => {
           <div className='flex flex-col'>
             <Hero />
           </div>
-          <img src="/amico.png" alt="" className='w-96 h-96'/>
+          <img src="/amico.png" alt="" className='hidden md:block w-96 h-96'/>
           
         </div>
 

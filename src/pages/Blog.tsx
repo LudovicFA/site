@@ -30,9 +30,9 @@ const Blog = () => {
       <div className='flex flex-row flex-wrap justify-center items-center mt-6'>
           {
             posts.map((post, index) => (
-              <div className='w-1/2'>
+              <div className='w-1/2'  key={index}>
                 <Link to={`/blog/${post.slug}`} >
-                 <PostCard post={post} key={index}/>
+                 <PostCard post={post}/>
                 </Link>
 
               </div>
