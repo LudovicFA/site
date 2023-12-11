@@ -12,7 +12,7 @@ const PostCard = ({post}: PostCardProps) => {
 
   return (
 
-    <div className="max-w-sm rounded overflow-hidden shadow-lg">
+    <div className="max-w-sm rounded overflow-hidden shadow-lg scale-100 hover:scale-105 ease-in duration-100">
       <img className="w-full" src={`/blog/images/${post.image}`} alt={lang === 'FR' ? post.title_fr : post.title_en} />
       <div className="px-6 py-4">
         <div className="font-bold text-xl mb-2">{lang ==='FR' ? post.title_fr : post.title_en}</div>

@@ -31,7 +31,7 @@ const Posts = () => {
           {posts.slice(0,2).map((post, index) => (
             <div className='w-full lg:w-1/2 mb-8 lg:flex-row flex-col lg:text-left'  key={post.slug}>
               <Link to={`/blog/${post.slug}`}>
-                <PostCard post={post} key={index}/>
+                <PostCard post={post} key={index} />
               </Link>
             </div>
           ))}
