@@ -16,7 +16,7 @@ export const posts = [
   },
   {
     title_fr: "L'API fetch",
-    title_en: "Fetch AOI",
+    title_en: "Fetch API",
     tags: ["Débutant", "JavaScript"],
     author: "Ludo",
     file_fr: "articles/fr/js/fetch_api.md",

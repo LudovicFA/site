@@ -84,7 +84,7 @@ const Contact = () => {
       }
       {alert.show && <Alert {...alert} />}
       <form
-          className="w-full flex flex-col gap-7 mt-14"
+          className="w-full flex flex-col mt-10"
           onSubmit={handleSubmit}
         >
           <label className="text-black-500 font-semibold">{ lang === 'FR' ? 'Nom / Prénom' : "Name / Firstname"}</label>
@@ -96,7 +96,7 @@ const Contact = () => {
             value={form.name}
             onChange={handleChange}
           />
-          <label className="text-black-500 font-semibold">E-mail</label>
+          <label className="text-black-500 font-semibold  mt-4">E-mail</label>
           <input
             type="email"
             name="email"
@@ -105,19 +105,19 @@ const Contact = () => {
             value={form.email}
             onChange={handleChange}
           />
-          <label className="text-black-500 font-semibold">{ lang === 'FR' ? 'Votre Message' : "Your Message"}</label>
+          <label className="text-black-500 font-semibold mt-4">{ lang === 'FR' ? 'Votre Message' : "Your Message"}</label>
           <textarea
             rows={4}
             name="message"
             className="textarea"
-            placeholder={ lang === 'FR' ? 'Dites moi comment je peux vous aider' : "Let me know how i can help you"}
+            placeholder={ lang === 'FR' ? 'Expliquez-moi votre projet' : "Let me know how i can help you"}
             value={form.message}
             onChange={handleChange}
           />
 
           <button
             type="submit"
-            className="btn"
+            className="btn mt-6"
             disabled={isLoading || !isFormValid}
 
           >

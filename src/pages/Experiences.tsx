@@ -46,7 +46,7 @@ const Experiences = () => {
           lang === 'EN' && ( <h1 className="head-text">
         📖 My {" "}
           <span className="blue-gradient_text font-semibold drop-shadow">
-            Expriences
+            Experiences
           </span>
               </h1>
               )
