@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Jotion = () => {
   return (
     <div className="w-full lg:w-1/2 mb-8 lg:flex-row flex-col lg:text-left">
