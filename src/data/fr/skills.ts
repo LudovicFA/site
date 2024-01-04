@@ -1,4 +1,5 @@
 import {
+  angular,
   css,
   express,
   git,
@@ -6,8 +7,10 @@ import {
   html,
   javascript,
   mongodb,
+  mysql,
   nextjs,
   nodejs,
+  php,
   react,
   redux,
   sass,
@@ -85,5 +88,20 @@ export const skills = [
     imageUrl: typescript,
     name: "TypeScript",
     type: "Frontend",
+  },
+  {
+    imageUrl: mysql,
+    name: "Mysql",
+    type: "Database",
+  },
+  {
+    imageUrl: angular,
+    name: "Angular",
+    type: "Frontend",
+  },
+  {
+    imageUrl: php,
+    name: "PHP",
+    type: "Backend",
   },
 ];

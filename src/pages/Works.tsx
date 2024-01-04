@@ -1,12 +1,39 @@
+import { useI18nMode } from "../context/I18nModeContext";
+import Jotion from "./works/Jotion";
+import Twitch from "./works/Twitch";
 
 const Works = () => {
+  const {lang} = useI18nMode();
+
   return (
     <section className='max-container'>
-        <h1 className='head-text'>Works</h1>
+      {
+        lang === 'FR' && ( <h1 className="head-text">
+        📰  Mes{" "}
+        <span className="blue-gradient_text font-semibold drop-shadow">
+         Réalisations
+        </span>
+            </h1>
+            )
+      }
+      {
+          lang === 'EN' && ( <h1 className="head-text">
+         📰  My {" "}
+          <span className="blue-gradient_text font-semibold drop-shadow">
+            Works
+          </span>
+              </h1>
+              )
+      }
+      <div className='flex flex-wrap justify-center lg:justify-start mt-6'>
+        
+          <Jotion />
+          <Twitch />
+      </div>
 
-        <p className="bg-red-100 border-4 border-red-500 text-red-700 p-4 text-center mt-8">
-          WORK IN PROGRESS
-        </p>
+       
+
+
     </section>
   )
 }

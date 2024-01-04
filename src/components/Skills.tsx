@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import { useI18nMode } from "../context/I18nModeContext";
 import { Skill } from "../types/Skill";
 import groupSkillsByType from "../lib/utils/groupSkillsByType";
-
+import { Tooltip } from 'react-tooltip'
+import 'react-tooltip/dist/react-tooltip.css'
 
 async function getSkills(lang:string): Promise<Skill[]>{
     if(lang === 'EN'){
@@ -55,7 +56,12 @@ const Skills = () => {
               <h4 className='subsubhead-text border-b-2 border-blue-500 '>{key}</h4>
               <div  className="mt-2 flex flex-wrap gap-12 py-4">
                 {skillsOfType.map((skill, index) => (
-                  <div className="block-container w-14 h-14" key={index}>
+                  <>
+                  <div 
+                    className="block-container w-14 h-14" 
+                    data-tooltip-id={`skill-${index}`} data-tooltip-content={skill.name}
+                    key={index}
+                  >
                     <div className="btn-back rounded-xl" />
                       <div className="btn-front rounded-xl flex justify-center items-center">
                         <img
@@ -64,7 +70,9 @@ const Skills = () => {
                           className="w-1/2 h-1/2 object-contain"
                         />
                       </div>
+                    <Tooltip id={`skill-${index}`} />
                   </div>
+                  </>
                 ))}
               </div>
             </div>
