@@ -15,16 +15,16 @@ const Twitch = () => {
         <hr className="my-4"/>
         <div className="font-semibold mb-2">Features</div>
         <ul className="pl-6">           
-            <li>📡 Streaming using RTMP / WHIP protocols </li>
-            <li>🔗 Connecting Next.js app to OBS / Your favorite streaming software </li>
-            <li>🔐 Authentication </li>
-            <li>📸 Thumbnail upload</li>
-            <li>💬 Real-time chat using sockets </li>
-            <li>👥 Following system </li>
-            <li>🚫 Blocking system </li>
-            <li>🎛️ Streamer / Creator Dashboard </li>
-            <li>📴 Enable / Disable chat </li>
-            <li>🏠 Home page recommending streams, sorted by live first </li>
+            <li>📡 Streaming utilisant le protocole RTMP / WHIP </li>
+            <li>🔗 Connection entre l'application Next.JS et OBS</li>
+            <li>🔐 Authentification </li>
+            <li>📸 Upload de miniature</li>
+            <li>💬 Tchat temp réél avec les sockets </li>
+            <li>👥 Système de followers </li>
+            <li>🚫 Système de blocage </li>
+            <li>🎛️ Dashboard Streamer / Createur  </li>
+            <li>📴 Activation / Désactivation du tchat </li>
+            <li>🏠 Page d'accueil stream recommandé, tri par live en cours</li>
             <li>📄 SSR (Server-Side Rendering) </li>
             <li>🗃️ MySQL</li>
             <li>...</li>

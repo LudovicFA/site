@@ -13,13 +13,13 @@ const Jotion = () => {
                 <hr className="my-4"/>
                 <div className="font-semibold mb-2">Features</div>
                 <ul className="pl-6">
-                    <li>Real-time database  🔗</li>
-                    <li>Notion-style editor 📝</li>
-                    <li>Light and Dark mode 🌓</li>
-                    <li>Infinite children documents 🌲</li>
-                    <li>Trash can & soft delete 🗑️</li>
-                    <li>Authentication 🔐 </li>
-                    <li>File upload</li>
+                    <li>🔗Base de donnée en temps réel</li>
+                    <li>📝Notion-style éditeur </li>
+                    <li>🌓Mode clair et sombre </li>
+                    <li>🌲Infinité de sous/documents </li>
+                    <li>🗑️Corbeille et suppression douce </li>
+                    <li>🔐Authentication  </li>
+                    <li>Upload de fichier (icone, couverture)</li>
                     <li>...</li>
                 </ul>
                 <hr className="my-4"/>
