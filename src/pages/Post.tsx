@@ -29,7 +29,7 @@ const Post = () => {
     <section className='max-container'>
       {post && (
         <>
-          <h1 className='head-text'>{lang === 'FR' ? post?.title_fr : post?.title_en}</h1>
+          <h1 className='head-text blue-gradient_text font-semibold drop-shadow'>{lang === 'FR' ? post?.title_fr : post?.title_en}</h1>
           <div className=" pt-4">
             {
                 post.tags.map((tag, index) => (

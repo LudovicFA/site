@@ -1,12 +1,12 @@
 export const posts = [
   {
-    title_fr: "6 types d'arrow fonction",
+    title_fr: "Types d'arrow fonction",
     title_en: "Arrow fonction",
     tags: ["Débutant", "JavaScript"],
     author: "Ludo",
     file_fr: "articles/fr/js/arrow_function.md",
     file_en: "articles/en/js/arrow_function.md",
-    slug: "6-types-darrow-fonction",
+    slug: "types-darrow-fonction",
     subtitle_fr:
       "Les fonctions fléchées sont devenues incontournables dans le monde de JavaScript, offrant une syntaxe concise et des fonctionnalités puissantes pour les développeurs. Comprendre les différentes manières dont les fonctions fléchées peuvent être utilisées est essentiel pour exploiter pleinement leur potentiel. ",
     subtitle_en:

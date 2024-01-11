@@ -187,3 +187,10 @@ body:has(.card[data-color="green"]:hover) {
   box-shadow: 0.6vmin 0.6vmin #fff, 1vmin 1vmin #d2e4ff, 1vmin 1vmin #d2e4ff,
     0.65vmin 1vmin #d2e4ff, 1vmin 0.65vmin #d2e4ff;
 }
+
+.markdown-container h2 {
+  @apply blue-gradient_text font-bold drop-shadow subsubhead-text mt-6
+}
+.markdown-container h1 {
+  @apply blue-gradient_text font-bold drop-shadow subsubhead-text mt-6
+}

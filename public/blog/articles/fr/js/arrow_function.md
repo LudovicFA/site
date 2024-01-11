@@ -1,4 +1,6 @@
-## 1 - Pas de paramètre
+Il existe 6 type de fonction fléchées (Arrow Function). Voici les différentes ecriture que l'on peut rencontrer : 
+
+## Pas de paramètre
 
 Si la fonction ne prends pas de paramètre, il faut utiliser les paranthèses vides
 
@@ -7,7 +9,7 @@ const maFunc = () => "Bonjour!";
 console.log(maFunc());
 ```
 
-## 2 - 1 seul paramètre
+## Un seul paramètre
 
 S'il y a un seul paramètre, les parenthèses ne sont pas necessaire.
 
@@ -16,7 +18,7 @@ const maFunc = (x) => x * x;
 console.log(maFunc(8));
 ```
 
-## 3 - Multiple paramètres
+## Multiple paramètres
 
 Si la fonction possède plusieurs paramètres, il est necessaire d'avoir des parenthèses
 
@@ -25,7 +27,7 @@ const multiply = (a, b) => a * b;
 console.log(multiply(3, 2));
 ```
 
-## 4 - Fonction avec plusieurs instructions
+## Fonction avec plusieurs instructions
 
 Si la fonction necessite plusieurs instructions, il faut encadrer l'ensemble des instructions avec des accolage.
 
@@ -37,7 +39,7 @@ const multiply = (a, b) => {
 console.log(multiply(3, 2));
 ```
 
-## 5 - La fonction retourne un objet
+## La fonction retourne un objet
 
 Quand la fonction retourne directement un objet, il faut encadrer cet objet de parathèses pour différencier l'objet du corps de la fonction.
 
@@ -46,7 +48,7 @@ const user = (name, email) => ({username: name, login: email});
 console.log('Jean', 'Morice);
 ```
 
-## 6 - Higher Order Function et callback
+## Higher Order Function et callback
 
 Les arrow fonctions sont très populaires lorsque l'on souhaite faire des courtes callback. Mais n'importe qu'elle fonction peut être transformée en arrow function peut importe sa "longueur"
 
