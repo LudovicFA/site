@@ -4,7 +4,6 @@ import { useI18nMode } from '../context/I18nModeContext';
 const Hero = () => {
   const {lang} = useI18nMode();
 
-
   return (
     <>
         {
@@ -31,7 +30,9 @@ const Hero = () => {
       }
 
         <p className='mt-6 text-lg'>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, voluptatem. Quaerat possimus tempora animi, itaque aperiam praesentium maxime deserunt repellendus rem ea et architecto corrupti illo velit dolorum cum beatae.
+            Développeur Web JS Fullstack, PHP depuis 14ans.<br />
+            Sur ce site vous retrouver <a href="/works" className='font-semibold text-black hover:text-blue-500 hover:cursor-pointer'>Mes Réalisations</a> et <a href="/blog"  className='font-semibold text-black hover:text-blue-500 hover:cursor-pointer'>Mes articles</a> que je vous invite à regarder.<br />
+            N'hésitez pas me contacter si vous souhaitez échanger sur votre projet. 
         </p>
         <section className="cta mt-4">
             <Link to="/contact" className="btn">
