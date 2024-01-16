@@ -49,7 +49,7 @@ const Navbar = () => {
           ))
         }
 
-        | 
+        {/* | 
         <p>
         <a onClick={() => setLangMode('FR')}
             className={`${lang === 'FR' ? "text-blue-500" : "text-black hover:text-blue-500"} cursor-pointer`}>
@@ -61,7 +61,7 @@ const Navbar = () => {
             EN
           </a>
 
-        </p>
+        </p> */}
       </nav>
     </header>
   );

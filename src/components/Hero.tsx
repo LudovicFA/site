@@ -34,6 +34,9 @@ const Hero = () => {
             Sur ce site vous retrouver <a href="/works" className='font-semibold text-black hover:text-blue-500 hover:cursor-pointer'>Mes Réalisations</a> et <a href="/blog"  className='font-semibold text-black hover:text-blue-500 hover:cursor-pointer'>Mes articles</a> que je vous invite à regarder.<br />
             N'hésitez pas me contacter si vous souhaitez échanger sur votre projet. 
         </p>
+        {/* <p>
+        Salut, c'est LuDev ! 💻 Passionné de code, je transforme des idées en réalité digitale avec style. De la magie du développement à la résolution de bugs, chaque ligne de code compte. Prêt à créer ensemble quelque chose d'incroyable ? Let's code the future! 🚀✨
+        </p> */}
         <section className="cta mt-4">
             <Link to="/contact" className="btn">
             Me Contacter
