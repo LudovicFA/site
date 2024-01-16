@@ -8,7 +8,7 @@ export const links = [
     route: "/experiences",
   },
   {
-    label: "Works",
+    label: "Réalisations",
     route: "/works",
   },
   {
