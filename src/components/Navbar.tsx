@@ -17,7 +17,7 @@ async function getLinks(lang:string): Promise<Route[]>{
 }
 
 const Navbar = () => {
-  const {lang, setLangMode} = useI18nMode()
+  const {lang} = useI18nMode()
   const [links, setLinks] = useState([] as Route[])
   useEffect(
     function(){
